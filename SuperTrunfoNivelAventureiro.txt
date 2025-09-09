@@ -1,0 +1,73 @@
+Novas Funcionalidades:
+Cadastro de Cartas: Semelhante ao nível Novato, com a adição de comparação de múltiplos atributos.
+Menu Interativo: Uso de switchpara criar um menu que permite ao jogador escolher os atributos a serem comparados.
+Exibição de Resultados: O sistema exibirá o resultado da comparação, diminuindo qual carta vencida e qual atributo foi utilizado.
+
+
+
+
+int main(void) {
+/* Carta 1 */
+int pop1;
+float area1;
+float pib1;
+int pontos1;
+float dens1;
+float pibpc1;
+
+/* Carta 2 */
+int pop2;
+float area2;
+float pib2;
+int pontos2;
+float dens2;
+float pibpc2;
+
+printf("== Cadastro da Carta 1 ==\n");
+printf("Populacao (int): ");
+scanf("%d", &pop1);
+printf("Area (float): ");
+scanf("%f", &area1);
+printf("PIB (float): ");
+scanf("%f", &pib1);
+printf("Numero de pontos turistico (int): ");
+scanf("%d", &pontos1);
+
+printf("\n== Cadastro da Carta 2 ==\n");
+printf("Populacao (int): ");
+scanf("%d", &pop2);
+printf("Area (float): ");
+scanf("%f", &area2);
+printf("PIB (float): ");
+scanf("%f", &pib2);
+printf("Numero de pontos turistico (int): ");
+scanf("%d", &pontos2);
+
+/* Calcula atributos derivados */
+dens1 = (float)pop1 / area1;
+pibpc1 = pib1 / (float)pop1;
+
+dens2 = (float)pop2 / area2;
+pibpc2 = pib2 / (float)pop2;
+
+printf("\n--- Dados Cadastrados (com atributos calculados) ---\n");
+
+printf("\nCarta 1:\n");
+printf("Populacao: %d\n", pop1);
+printf("Area: %.2f\n", area1);
+printf("PIB: %.2f\n", pib1);
+printf("Pontos turisticos: %d\n", pontos1);
+printf("Densidade populacional: %.4f\n", dens1);
+printf("PIB per capita: %.6f\n", pibpc1);
+
+printf("\nCarta 2:\n");
+printf("Populacao: %d\n", pop2);
+printf("Area: %.2f\n", area2);
+printf("PIB: %.2f\n", pib2);
+printf("Pontos turisticos: %d\n", pontos2);
+printf("Densidade populacional: %.4f\n", dens2);
+printf("PIB per capita: %.6f\n", pibpc2);
+
+return0;
+
+}
